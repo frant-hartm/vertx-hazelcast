@@ -25,12 +25,12 @@ public class TestClusterManager {
 
   public static Config getConf(Config conf) {
     Module hzMod = NetworkConfig.class.getModule();
-    if (hzMod.isNamed()) {
-      NetworkConfig networkConfig = conf.getNetworkConfig();
-      networkConfig.getInterfaces().addInterface("127.0.0.1");
-      networkConfig.getJoin().getMulticastConfig().setEnabled(false);
-      networkConfig.getJoin().getTcpIpConfig().setEnabled(true).addMember("127.0.0.1");
-    }
+//    if (hzMod.isNamed()) {
+//      NetworkConfig networkConfig = conf.getNetworkConfig();
+//      networkConfig.getInterfaces().addInterface("127.0.0.1");
+//      networkConfig.getJoin().getMulticastConfig().setEnabled(false);
+//      networkConfig.getJoin().getTcpIpConfig().setEnabled(true).addMember("127.0.0.1");
+//    }
     return conf;
   }
 

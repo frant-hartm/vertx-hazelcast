@@ -150,12 +150,12 @@ public class HazelcastClusterManager implements ClusterManager, MembershipListen
 
 
         Module hzMod = NetworkConfig.class.getModule();
-        if (hzMod.isNamed()) {
-          NetworkConfig cfg = hazelcast.getConfig().getNetworkConfig();
-          if (cfg.getJoin().getMulticastConfig().isEnabled()) {
-            throw new VertxException("Hazelcast detected on module path multicast join not supported");
-          }
-        }
+//        if (hzMod.isNamed()) {
+//          NetworkConfig cfg = hazelcast.getConfig().getNetworkConfig();
+//          if (cfg.getJoin().getMulticastConfig().isEnabled()) {
+//            throw new VertxException("Hazelcast detected on module path multicast join not supported");
+//          }
+//        }
 
         subsMapHelper = new SubsMapHelper(hazelcast, registrationListener);
 
